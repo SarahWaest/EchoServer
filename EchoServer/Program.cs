@@ -1,12 +1,11 @@
-﻿using System;
-
-namespace EchoServer
+﻿namespace EchoServer
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        static void Main(string[]args)
         {
-            Console.WriteLine("Hello World!");
+            Server serverObject = new Server();
+            serverObject.Start();
         }
     }
 }
