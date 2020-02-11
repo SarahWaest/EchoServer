@@ -19,6 +19,7 @@ namespace EchoServer
         {
             //_ipAddress = IPAddress.Loopback;
             _tcpListener = new TcpListener(_ipAddress, _port);
+            Console.WriteLine("Server activated");
         }
 
         public void Start()
@@ -43,7 +44,7 @@ namespace EchoServer
         public void DoClient(TcpClient socket)
         {
             Stream ns = connectionSocket.GetStream();
-            Console.WriteLine("Server activated");
+            Console.WriteLine("Client Connected");
 
             StreamReader sr = new StreamReader(ns);
             StreamWriter sw = new StreamWriter(ns);
